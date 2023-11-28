@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "alembictest"
+version = "0.1.0"
+description = ""
+authors = ["Evan Young <cantis@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sqlalchemy = "^2.0.23"
+alembic = "^1.12.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.format]
+quote-style = "single"
+block-quotes = "single"
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "single"
+multiline-quotes = "single"
+
+[tool.ruff.lint.pycodestyle]
+max-line-length = 120
